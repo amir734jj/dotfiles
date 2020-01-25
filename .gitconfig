@@ -1,0 +1,30 @@
+[user]
+	name = Amir
+	email = hesamian@uwm.edu
+
+[core]
+	autocrlf = input
+
+[credential]
+	helper = store
+
+[color]
+    ui = true
+
+[alias]
+	cm = "!f() {                                    \
+	    git checkout master;                        \
+	}; f"
+	cd = "!f() {                                    \
+	    git checkout develop;                       \
+	}; f"
+	current-branch = "!f() {                        \
+	    git branch | grep \\* | cut -d ' ' -f2;     \
+	}; f"
+	cb = current-branch
+
+[cola]
+	spellcheck = false
+	fontdiff = Monaco,10,-1,5,50,0,0,0,0,0
+	blameviewer = git gui blame
+
