@@ -34,6 +34,14 @@ function andrew() {
 
 export -f andrew
 
+function publish() {
+  git add .;
+  git commit -m "wip ...";
+  git push;
+}
+
+export -f publish
+
 export PATH="/snap/bin:$PATH"
 export PATH="$PATH:$HOME/.dotnet/tools/"
 export PATH="$PATH:$HOME/.local/bin"
