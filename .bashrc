@@ -1,5 +1,6 @@
 alias open=nautilus
 export UWM_PASSWORD="PASSWORD_HERE"
+export LOCAL_PASSWORD="PASSWORD_HERE"
 
 # dos2unix fast ...
 function dos2unix() {
@@ -33,6 +34,13 @@ function andrew() {
 }
 
 export -f andrew
+
+# login to local fast ...
+function amir-pc() {
+  sshpass -p ${LOCAL_PASSWORD} ssh amir-pc@local.hesamian.com -p 53211 -tt
+}
+
+export -f amir-pc
 
 function publish() {
   git add .;
